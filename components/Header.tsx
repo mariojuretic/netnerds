@@ -18,7 +18,7 @@ export default function Header() {
       <Link
         href="https://www.weblio.hr/"
         target="_blank"
-        className="rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-sky-500 md:text-base"
+        className="rounded-lg bg-slate-900 px-9 py-3 text-sm font-semibold text-sky-500 md:text-base"
       >
         Sign up for our newsletter
       </Link>
