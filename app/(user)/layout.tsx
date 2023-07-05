@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 
 import Header from "@/components/Header";
+import Banner from "@/components/Banner";
 
 import "../globals.css";
 
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={poppins.className}>
         <div className="mx-auto max-w-7xl">
           <Header />
+          <Banner />
           {children}
         </div>
       </body>

@@ -5,8 +5,8 @@ import logo from "@/assets/logo.png";
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between p-8">
-      <Link href="/" className="relative h-12 w-52">
+    <header className="flex flex-col items-center justify-between space-y-4 px-8 py-4 sm:flex-row sm:space-x-8 sm:space-y-0 md:py-8">
+      <Link href="/" className="relative h-11 w-48 md:h-12 md:w-52">
         <Image
           src={logo}
           alt="Logo"
