@@ -1,3 +1,5 @@
+import { theme } from "https://themer.sanity.build/api/hues?default=64748b&primary=0ea5e9&transparent=64748b&positive=22c55e;400&caution=facc15;300&critical=dc2626&lightest=f1f5f9&darkest=0f172a";
+
 import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
 
@@ -16,4 +18,6 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
+
+  theme,
 });
