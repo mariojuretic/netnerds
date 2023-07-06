@@ -20,6 +20,20 @@ const query = groq`
   }
 `;
 
+export const revalidate = 120;
+
+export async function generateStaticParams() {
+  const query = groq`
+    *[_type == "post"] {
+      slug
+    }
+  `;
+
+  const posts: Post[] = await client.fetch(query);
+
+  return posts.map((post) => ({ slug: post.slug.current }));
+}
+
 export default async function PostPage({ params: { slug } }: Props) {
   const post: Post = await client.fetch(query, { slug });
 

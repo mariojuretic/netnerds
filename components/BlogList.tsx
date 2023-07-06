@@ -56,8 +56,10 @@ export default function BlogList({ posts }: Props) {
                 </div>
               </div>
 
-              <div className="my-4">
-                <p className="text-lg font-semibold">{post.title}</p>
+              <div className="my-4 space-y-2">
+                <p className="text-lg font-semibold leading-tight">
+                  {post.title}
+                </p>
                 <p className="line-clamp-2 text-sm text-slate-500">
                   {post.description}
                 </p>
