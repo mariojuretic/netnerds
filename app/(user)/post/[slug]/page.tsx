@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { groq } from "next-sanity";
+import { PortableText } from "@portabletext/react";
 
+import { RichTextComponents } from "@/components/RichTextComponents";
 import { client } from "@/lib/sanity.client";
 import urlFor from "@/lib/urlFor";
 
@@ -72,6 +74,12 @@ export default async function PostPage({ params: { slug } }: Props) {
           <p className="mt-4 max-w-prose text-sm md:text-base lg:order-2">
             {post.description}
           </p>
+        </div>
+      </section>
+
+      <section className="mb-8 px-8 py-4 md:py-8">
+        <div className="prose prose-slate mx-auto lg:prose-lg 2xl:prose-xl prose-a:decoration-sky-500 prose-a:decoration-2 hover:prose-a:decoration-black prose-blockquote:border-l-sky-500 prose-img:m-0">
+          <PortableText value={post.body} components={RichTextComponents} />
         </div>
       </section>
     </article>
