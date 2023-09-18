@@ -28,7 +28,7 @@ export default function BlogList({ posts }: Props) {
                   fill
                   className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
                   sizes="(max-width: 1023px) 100vw, (max-width: 1279px) 50vw, 592px"
-                  priority={index === 0}
+                  priority={index === 0 || index === 1}
                 />
 
                 <div className="absolute bottom-0 flex w-full justify-between space-x-4 rounded-lg bg-black/25 p-4 text-white backdrop-blur-sm sm:items-center">
