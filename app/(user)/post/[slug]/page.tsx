@@ -45,6 +45,8 @@ export default async function PostPage({ params: { slug } }: Props) {
           alt={post.title}
           fill
           className="scale-110 object-cover object-center opacity-25 blur-sm grayscale"
+          sizes="(max-width: 1279px) 100vw, 1280px"
+          priority
         />
 
         <div className="relative flex flex-1 flex-col justify-between p-8 text-white">

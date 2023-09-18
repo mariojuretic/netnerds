@@ -14,7 +14,7 @@ export default function BlogList({ posts }: Props) {
       <div className="my-8 h-px w-full bg-sky-500" />
 
       <main className="mb-8 grid grid-cols-1 gap-8 px-8 py-4 md:py-8 lg:grid-cols-2">
-        {posts.map((post) => (
+        {posts.map((post, index) => (
           <Link
             key={post._id}
             href={`/post/${post.slug.current}`}
@@ -27,6 +27,8 @@ export default function BlogList({ posts }: Props) {
                   alt={post.title}
                   fill
                   className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                  sizes="(max-width: 1023px) 100vw, (max-width: 1279px) 50vw, 592px"
+                  priority={index === 0}
                 />
 
                 <div className="absolute bottom-0 flex w-full justify-between space-x-4 rounded-lg bg-black/25 p-4 text-white backdrop-blur-sm sm:items-center">

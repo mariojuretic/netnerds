@@ -12,6 +12,7 @@ export default function Header() {
           alt="Logo"
           fill
           className="object-contain object-center"
+          sizes="(max-width: 767px) 192px, 208px"
         />
       </Link>
 
